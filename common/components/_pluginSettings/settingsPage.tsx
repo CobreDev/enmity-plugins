@@ -122,7 +122,7 @@ export default ({ manifest, settings, hasToasts, children, commands }: SettingsP
         leading={<FormRow.Icon style={styles.icon} source={Icons.Open} />}
         trailing={FormRow.Arrow}
         onPress={() => {
-          Router.openURL(`https://github.com/spinfal/enmity-plugins/tree/master/${manifest['name']}`)
+          Router.openURL(`https://github.com/cobredev/enmity-plugins/tree/master/${manifest['name']}`)
         }}
       />
     </FormSection>

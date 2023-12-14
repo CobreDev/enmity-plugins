@@ -18,7 +18,7 @@ const BTE: Plugin = {
     ...manifest,
     onStart() {
         try {
-            if (!get("_twitter", "_type", false)) set("_twitter", "_type", "fxtwitter");
+            if (!get("_twitter", "_type", false)) set("_twitter", "_type", "twitter-og");
 
             Patcher.before(Messages, "sendMessage", (_self, args, _orig) => {
                 const content = args[1]["content"];
@@ -38,7 +38,7 @@ const BTE: Plugin = {
         return <SettingsPage manifest={manifest} settings={settings} hasToasts={false} commands={null}>
             <FormSection title="Plugin Settings">
                 <FormRow
-                    label="Use vxtwitter.com instead of fxtwitter.com"
+                    label="Use vxtwitter.com instead of twitter-og.com"
                     leading={<FormRow.Icon source={Icons.Copy} />}
                     trailing={
                         <FormSwitch
@@ -49,7 +49,7 @@ const BTE: Plugin = {
                                     if (settings.getBoolean("_vxtwitter", false)) {
                                         set("_twitter", "_type", "vxtwitter");
                                     } else {
-                                        set("_twitter", "_type", "fxtwitter");
+                                        set("_twitter", "_type", "twitter-og");
                                     }
                                     Toasts.open({
                                         content: `Switched to ${get("_twitter", "_type", false)}.`,

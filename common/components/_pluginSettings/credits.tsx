@@ -87,14 +87,14 @@ export default ({ manifest }: Props) => {
     };
 
     // opens the repo of the plugin externally
-    const onPress = () => { Router.openURL("https://spin.rip/") };
+    const onPress = () => { Router.openURL("https://cobre.dev/") };
     const animatedScaleStyle = { transform: [{ scale: animatedButtonScale }] } // main actual styling for the scale
 
     return <>
         <View style={styles.container}>
             <TouchableOpacity
                 // used a TouchableOpacity to add opacity changes to the icon upon any press
-                onPress={onPress} // opens spin's personal site
+                onPress={onPress} // opens cobre's personal site
                 onPressIn={onPressIn} // in animation
                 onPressOut={onPressOut} // out animation
             >
@@ -103,7 +103,7 @@ export default ({ manifest }: Props) => {
                         style={[styles.image]}
                         source={{
                             // image used for the icon, source takes either a require() or a uri
-                            uri: 'https://cdn.spin.rip/r/l9uevwe4ia0.jpg',
+                            uri: 'https://raw.githubusercontent.com/CobreDev/cobre.dev/master/Cobre.png',
                         }}
                     />
                 </Animated.View>

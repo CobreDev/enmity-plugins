@@ -5,6 +5,8 @@
   "description": "Convert Twitter/X links to FxTwitter links so the tweet embed is better.",
   "authors": [
     {
+      "name": "spin",
+      "id": "308440976723148800",
       "name": "cobre.",
       "id": "621730208395034624"
     }
